@@ -10,7 +10,7 @@ const httpStatus = require("http-status-codes");
 // 에러 처리 위한 미들웨어 추가
 exports.logErrors = (err, req, res, next) => {
   console.error(err.stack); // 에러 스택 로깅
-  next(err); // 다음 미들웨어 함수로 에허 전달
+  next(err); // 다음 미들웨어 함수로 에러 전달
 };
 
 /**
