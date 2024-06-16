@@ -69,8 +69,8 @@ module.exports = {
     req.logout(() => {
       console.log("logged out");
     });
-    res.locals.redirect = "/";
     req.flash("success", "logged out");
+    res.locals.redirect = "/";
     next();
   },
 
@@ -87,6 +87,7 @@ module.exports = {
         next(error); // 에러를 캐치하고 다음 미들웨어로 전달
       });
   },
+
   indexView: (req, res) => {
     res.render("users/index", {
       page: "users",

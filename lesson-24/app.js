@@ -175,7 +175,7 @@ router.post(
 
 // Listing 24.7 후에 (p. 358)
 // 로그아웃을 위한 라우트 추가
-
+router.get("/users/logout", usersController.logout, usersController.redirectView);
 /**
  * Users
  */
